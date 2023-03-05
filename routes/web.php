@@ -14,6 +14,7 @@ use App\Http\Controllers\KabKota\KabKotaController;
 use App\Http\Controllers\Kecamatan\KecamatanController; 
 use App\Http\Controllers\KelDesa\KelDesaController; 
 use App\Http\Controllers\Bksu\BksuController; 
+use App\Http\Controllers\Bksd\BksdController; 
 use App\Http\Controllers\JenisKerjasama\JenisKerjasamaController; 
 use App\Http\Controllers\JenisMitra\JenisMitraController; 
 use App\Http\Controllers\Mitra\MitraController; 
