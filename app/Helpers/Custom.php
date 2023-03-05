@@ -95,6 +95,18 @@ class Custom {
 		return true;
 	}
 
+	public static function uploadFile($File, $nmFile, $uploadDir) {
+		$dir_path	= public_path($uploadDir);
+		$file 		= $File;
+		$nmFile 	= $nmFile;
+		if (!File::isDirectory($dir_path)) {
+			File::makeDirectory($dir_path);
+		}
+		$destinationPath = $dir_path;
+		$File->move($destinationPath,$nmFile);
+		return true;
+	}
+
 	public static function deleteImg($imgFile, $uploadDir, $dimensi_thumbnail) {
 		$dir_path	= public_path($uploadDir);
 		File::delete($dir_path . '/' . $imgFile);
@@ -105,6 +117,19 @@ class Custom {
 			}
 		}
 		return true;
+	}
+
+	public static function deleteFile($imgFile, $uploadDir) {
+		$dir_path	= public_path($uploadDir);
+		File::delete($dir_path . '/' . $imgFile);
+		return true;
+	}
+
+	public static function nameFile($file) {
+		$ext 		= $file->getClientOriginalExtension();
+		$file_name 	= $file->getClientOriginalName();
+		$nmImg 		= date("YmdHis")."_".substr(md5($file_name.date('Y-m-d H:i:s')), 0, 25).".".$ext;
+		return $nmImg;
 	}
 
 	public static function nameImg($file) {

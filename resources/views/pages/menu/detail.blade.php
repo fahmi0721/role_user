@@ -48,6 +48,7 @@
 <script>
     $(function() {
        $('#menu-table').DataTable({
+
             processing: true,
             responsive: true,
             serverSide: true,
@@ -103,7 +104,7 @@
                                 type: "success",
                             },
                         function(){
-                            window.location.reload();
+                            window.location.reload(null,false);
                         });
                        
                     },

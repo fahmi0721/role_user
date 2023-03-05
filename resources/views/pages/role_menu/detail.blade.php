@@ -50,6 +50,7 @@
 <script>
     $(function() {
        $('#role-table').DataTable({
+            stateSave: true,
             processing: true,
             responsive: true,
             serverSide: true,
@@ -165,7 +166,7 @@
                                 },
                             function(){
                                 var table = $('#role-table').DataTable();
-                                table.ajax.reload();
+                                table.ajax.reload(null,false);
                             });
                         }else{
                             swal(

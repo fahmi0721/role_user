@@ -35,6 +35,9 @@
     <!-- Sweetalrt plugin -->
     <link href="{{ asset('public/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet" />
 
+    <!-- Datepicker plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -130,10 +133,18 @@
     <!-- Sweetalrt plugin -->
     <script src="{{ asset('public/plugins/sweetalert/sweetalert.min.js') }}"></script>
 
+    <!-- Datepicker plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+
     <!-- SlimScroll -->
     <script src="{{ asset('public/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
     <!-- FastClick -->
     <script src="{{ asset('public/plugins/fastclick/fastclick.min.js') }}"></script>
+    
     <!-- AdminLTE App -->
     <script src="{{ asset('public/admin_lte/js/app.min.js') }}"></script>
     <script src="{{ asset('public/admin_lte/js/main.js') }}"></script>

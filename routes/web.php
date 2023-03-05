@@ -16,6 +16,10 @@ use App\Http\Controllers\KelDesa\KelDesaController;
 use App\Http\Controllers\Bksu\BksuController; 
 use App\Http\Controllers\JenisKerjasama\JenisKerjasamaController; 
 use App\Http\Controllers\JenisMitra\JenisMitraController; 
+use App\Http\Controllers\Mitra\MitraController; 
+use App\Http\Controllers\Unit\UnitController; 
+use App\Http\Controllers\Usulan\UsulanController; 
+use App\Http\Controllers\DokumenKerjasama\DokumenKerjasamaController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -133,6 +137,51 @@ Route::prefix('jenis-mitra')->middleware('auth')->group(function () {
     Route::put('/update_status/{id}', [JenisMitraController::class, 'update_status']);
     Route::get('/get_kab_kota/{id}', [JenisMitraController::class, 'kab_kota']);
     Route::get('/get_kecamatan/{id_provinsi}/{id_kab_kota}', [JenisMitraController::class, 'kecamatan']);
+});
+
+/** M MITRA */
+Route::prefix('mitra')->middleware('auth')->group(function () {
+    Route::get('/', [MitraController::class, 'index']);
+    Route::get('/add', [MitraController::class, 'create']);
+    Route::post('/save', [MitraController::class, 'store']);
+    Route::get('/ubah/{id}', [MitraController::class, 'edit']);
+    Route::put('/update/{id}', [MitraController::class, 'update']);
+    Route::delete('/delete/{id}', [MitraController::class, 'destroy']);
+    Route::put('/update_status/{id}', [MitraController::class, 'update_status']);
+    Route::get('/get_kab_kota/{id}', [MitraController::class, 'kab_kota']);
+    Route::get('/get_kecamatan/{id_provinsi}/{id_kab_kota}', [MitraController::class, 'kecamatan']);
+    Route::get('/get_kel_desa/{id_provinsi}/{id_kab_kota}/{id_kecamatan}', [MitraController::class, 'kel_desa']);
+});
+
+/** M UNIT */
+Route::prefix('unit')->middleware('auth')->group(function () {
+    Route::get('/', [UnitController::class, 'index']);
+    Route::get('/add', [UnitController::class, 'create']);
+    Route::post('/save', [UnitController::class, 'store']);
+    Route::get('/ubah/{id}', [UnitController::class, 'edit']);
+    Route::put('/update/{id}', [UnitController::class, 'update']);
+    Route::delete('/delete/{id}', [UnitController::class, 'destroy']);
+});
+
+/** M USULAN */
+Route::prefix('usulan')->middleware('auth')->group(function () {
+    Route::get('/', [UsulanController::class, 'index']);
+    Route::get('/add', [UsulanController::class, 'create']);
+    Route::post('/save', [UsulanController::class, 'store']);
+    Route::get('/ubah/{id}', [UsulanController::class, 'edit']);
+    Route::put('/update/{id}', [UsulanController::class, 'update']);
+    Route::delete('/delete/{id}', [UsulanController::class, 'destroy']);
+});
+
+/** T DOKUEN KERJASAMA */
+Route::prefix('dokumen-ks')->middleware('auth')->group(function () {
+    Route::get('/', [DokumenKerjasamaController::class, 'index']);
+    Route::get('/add', [DokumenKerjasamaController::class, 'create']);
+    Route::post('/save', [DokumenKerjasamaController::class, 'store']);
+    Route::get('/ubah/{id}', [DokumenKerjasamaController::class, 'edit']);
+    Route::put('/update/{id}', [DokumenKerjasamaController::class, 'update']);
+    Route::delete('/delete/{id}', [DokumenKerjasamaController::class, 'destroy']);
+    Route::get('/get_usulan/{id}', [DokumenKerjasamaController::class, 'get_usulan']);
 });
 
 

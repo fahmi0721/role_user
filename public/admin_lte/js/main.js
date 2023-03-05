@@ -79,3 +79,11 @@ $.extend( $.fn.dataTable.defaults, {
 		paginate: { 'first': 'First', 'last': 'Last', 'next': '&rarr;', 'previous': '&larr;' }
 	},
 });
+
+$.extend( $.fn.datepicker.defaults, {
+	autoclose: true,
+	format:'yyyy-mm-dd',
+	todayHighlight: true
+
+});
+
