@@ -65,6 +65,7 @@ class UsersController extends Controller
                     "password" => bcrypt($request->password), 
                     "status" => $request->status, 
                     "level" => $request->level, 
+                    "user_id"  => auth()->user()->id,
                 ];
     
                 $result = User::create($data);
@@ -157,6 +158,7 @@ class UsersController extends Controller
                     "nama_user" => $request->nama_user, 
                     "status" => $request->status, 
                     "level" => $request->level, 
+                    "user_id"  => auth()->user()->id,
                 ];
                 if(!empty($request->password)){
                     $data += ["password" => bcrypt($request->password)];

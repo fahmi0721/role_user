@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
         'status',
         'level',
+        'user_id',
     ];
     protected $guarded	= ['created_at','updated_at'];
 
