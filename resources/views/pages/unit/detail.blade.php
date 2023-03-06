@@ -36,7 +36,7 @@ $cek_menu_akses = Custom::cek_akses_menu('unit',json_decode(Session::get('menu_a
                     <tr>
                         <th width='5px' class='text-center'>No</th>
                         <th class='text-center'>Nama Unit</th>
-                        <th class='text-center'>Pd Unit</th>
+                        <th class='text-center'>PJ Unit</th>
                         <th class='text-center'>Email</th>
                         <th class='text-center'>No Telepon</th>
                         <th class='text-center'>Website</th>

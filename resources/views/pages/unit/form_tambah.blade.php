@@ -33,8 +33,8 @@
             </div>
 
             <div class="form-group">
-                <label for="pd_unit" autocomplete=off class='control-label'>Pd Unit <span class='text-danger'>*</span></label>
-                <input type="text" placeholder="Entri Pd Unit" name='pd_unit' id='pd_unit' class='form-control'>
+                <label for="pd_unit" autocomplete=off class='control-label'>PJ Unit <span class='text-danger'>*</span></label>
+                <input type="text" placeholder="Entri PJ Unit" name='pd_unit' id='pd_unit' class='form-control'>
             </div>
             
             <div class="form-group">
