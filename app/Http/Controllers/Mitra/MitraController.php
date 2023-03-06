@@ -181,10 +181,10 @@ class MitraController extends Controller
     {
         try {
             $validates 	= [
-                "nama_mitra"  => "required|unique:t_mitra,id,",
+                "nama_mitra"  => "required",
                 "id_jenis_mitra"  => "required",
                 "id_jenis_mitra"  => "required",
-                "email"  => "required|email|unique:t_mitra,id,".$request->id,
+                "email"  => "required|email",
                 "no_tlp"  => "required",
                 "id_provinsi"  => "required",
                 "id_kab_kota"  => "required",
