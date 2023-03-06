@@ -122,7 +122,7 @@ class ProvinsiController extends Controller
     {
         try {
             $validates 	= [
-                "nama_provinsi"  => "required|unique:m_provinsi"
+                "nama_provinsi"  => "required"
             ];
             $validation = Validator::make($request->all(), $validates, Custom::messages(), []);
             if($validation->fails()) {
