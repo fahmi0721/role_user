@@ -184,7 +184,7 @@ class MitraController extends Controller
                 "nama_mitra"  => "required|unique:t_mitra,id,",
                 "id_jenis_mitra"  => "required",
                 "id_jenis_mitra"  => "required",
-                "email"  => "required|email|unique:t_mitra,email,".$request->email,
+                "email"  => "required|email|unique:t_mitra,id,".$request->id,
                 "no_tlp"  => "required",
                 "id_provinsi"  => "required",
                 "id_kab_kota"  => "required",
