@@ -148,6 +148,7 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('public/admin_lte/js/app.min.js') }}"></script>
     <script src="{{ asset('public/admin_lte/js/main.js') }}"></script>
+    <script src="{{ asset('public/plugins/chartjs/Chart.min.js') }}"></script>
 
     
     <!-- AdminLTE for demo purposes -->
