@@ -35,7 +35,7 @@ use App\Http\Controllers\DokumenKerjasama\DokumenKerjasamaController;
 Route::get('/no-akses', [HomeController::class, 'no_akses'])->name("no_akses");
 Route::get('/no-role', [HomeController::class, 'no_role']);
 Route::get('/coba', [HomeController::class, 'menu_akses']);
-Route::get('/tes-dir', function($e){
+Route::get('/tes-dir', function(){
     echo "ss";
 });
 
