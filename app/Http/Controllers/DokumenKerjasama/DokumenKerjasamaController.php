@@ -18,7 +18,7 @@ use Custom;
 
 class DokumenKerjasamaController extends Controller
 {
-    protected $uploadDir 	= "/dokumen/kerjasama/";
+    protected $uploadDir 	= __DIR__."/dokumen/kerjasama/";
 
     public function index(Request $request)
     {
