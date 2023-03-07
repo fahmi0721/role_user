@@ -36,7 +36,7 @@ Route::get('/no-akses', [HomeController::class, 'no_akses'])->name("no_akses");
 Route::get('/no-role', [HomeController::class, 'no_role']);
 Route::get('/coba', [HomeController::class, 'menu_akses']);
 Route::get('/tes-dir', function(){
-    $dir = opendir("/public/dokumen/kerjasama/")  or die('Folder tidak ditemukan ...!');
+    $dir = asset('public/admin_lte/js/app.min.js');
     print_r($dir);
 });
 
