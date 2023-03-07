@@ -18,7 +18,7 @@ use Custom;
 
 class DokumenKerjasamaController extends Controller
 {
-    protected $uploadDir 	= "/public/dokumen/kerjasama/";
+    protected $uploadDir 	= "/../../public_html/simkerma/public/dokumen/kerjasama/";
 
     public function index(Request $request)
     {
