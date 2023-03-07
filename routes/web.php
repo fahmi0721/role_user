@@ -35,6 +35,9 @@ use App\Http\Controllers\DokumenKerjasama\DokumenKerjasamaController;
 Route::get('/no-akses', [HomeController::class, 'no_akses'])->name("no_akses");
 Route::get('/no-role', [HomeController::class, 'no_role']);
 Route::get('/coba', [HomeController::class, 'menu_akses']);
+Route::get('/tes-dir', function($e){
+    echo "ss";
+});
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth');
 Route::get('/login', [AuthController::class, 'index'])->name("login");
