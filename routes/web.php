@@ -36,7 +36,7 @@ Route::get('/no-akses', [HomeController::class, 'no_akses'])->name("no_akses");
 Route::get('/no-role', [HomeController::class, 'no_role']);
 Route::get('/coba', [HomeController::class, 'menu_akses']);
 Route::get('/tes-dir', function(){
-    $dir = opendir(__DIR__."../public_html/simkerma/dokumen/kerjasama/");
+    $dir = opendir(__DIR__."../public_html/public/simkerma/dokumen/kerjasama/");
     print_r($dir);
 });
 
