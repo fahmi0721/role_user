@@ -48,7 +48,7 @@ class UsersController extends Controller
             $validates 	= [
                 "username"  => "required|unique:m_user",
                 "nama_user"  => "required",
-                "password"  => "required|min:8",
+                "password"  => "required",
             ];
             $validation = Validator::make($request->all(), $validates, Custom::messages(), []);
             if($validation->fails()) {

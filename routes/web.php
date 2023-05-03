@@ -48,6 +48,8 @@ Route::get('/', [HomeController::class, 'index'])->middleware('auth');
 Route::get('/get_pie_data', [HomeController::class, 'pie_data'])->middleware('auth');
 Route::get('/line_data', [HomeController::class, 'line_data'])->middleware('auth');
 Route::get('/bar_data', [HomeController::class, 'bar_data'])->middleware('auth');
+Route::get('/ganti-password', [HomeController::class, 'ganti_password'])->middleware('auth');
+Route::put('/save-password', [HomeController::class, 'save_password'])->middleware('auth');
 
 
 Route::get('/login', [AuthController::class, 'index'])->name("login");

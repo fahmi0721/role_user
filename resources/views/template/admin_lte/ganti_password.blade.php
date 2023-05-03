@@ -31,7 +31,7 @@
         <!-- Menu Footer-->
         <li class="user-footer">
         <div class="pull-left">
-            <a href="#" class="btn btn-default btn-flat">Ganti Password</a>
+            <a href="ganti-password" class="btn btn-default btn-flat">Ganti Password</a>
         </div>
         <div class="pull-right">
             <a href="#" 

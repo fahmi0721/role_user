@@ -22,7 +22,7 @@ class AuthController extends Controller
        
         $validates 	= [
             "username"  => "required",
-            "password"  => "required|min:7",
+            "password"  => "required",
         ];
         $validation = Validator::make($request->all(), $validates, Custom::messages(), []);
         if($validation->fails()) {

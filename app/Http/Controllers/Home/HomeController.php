@@ -31,8 +31,18 @@ class HomeController extends Controller
 
     public function no_role(){
         return view('pages.home.no-role');
-
     }
+
+    public function ganti_password(){
+        return view('pages.ganti_password');
+    }
+
+    public function save_password(Request $request){
+        $new_pass = bcrypt($request->password);
+        DB::SELECT("UPDATE m_user SET `password` = '$new_pass' WHERE id = '".auth()->user()->id."'");
+        return response()->json(['status'=>'success','messages'=>'proses success'], 201);
+    }
+    
 
     public function pie_data(){
         $res = array();
