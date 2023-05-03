@@ -41,7 +41,7 @@
                 <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
                     <div class="form-container">
                         <h3 class="title">My Account</h3>
-                        <form class="form-horizontal" id="FormData">
+                        <form class="form-horizontal" id="FormData" method="POST">
                             @csrf
                             <div class="form-icon">
                                 <i class="fa fa-user-secret"></i>

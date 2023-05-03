@@ -34,13 +34,22 @@ use App\Http\Controllers\DokumenKerjasama\DokumenKerjasamaController;
 */
 Route::get('/no-akses', [HomeController::class, 'no_akses'])->name("no_akses");
 Route::get('/no-role', [HomeController::class, 'no_role']);
-Route::get('/coba', [HomeController::class, 'menu_akses']);
+Route::get('/coba', function(){
+    $array = array("s"=>1, "b"=> 2);
+    $dt = array_search(1, $array);
+    echo $dt;
+});
 Route::get('/tes-dir', function(){
     $dir = asset('public/admin_lte/js/app.min.js');
     print_r($dir);
 });
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth');
+Route::get('/get_pie_data', [HomeController::class, 'pie_data'])->middleware('auth');
+Route::get('/line_data', [HomeController::class, 'line_data'])->middleware('auth');
+Route::get('/bar_data', [HomeController::class, 'bar_data'])->middleware('auth');
+
+
 Route::get('/login', [AuthController::class, 'index'])->name("login");
 Route::post('/login', [AuthController::class, 'login'])->name("login");
 Route::post('/logout', [AuthController::class, 'logout'])->name("logout");

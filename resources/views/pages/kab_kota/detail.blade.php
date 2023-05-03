@@ -64,7 +64,7 @@ $cek_menu_akses = Custom::cek_akses_menu('kab-kota',json_decode(Session::get('me
                 }},
                 { data: 'nama_kab_kota', name: 'nama_kab_kota' },
                 { data: 'deskripsi', name: 'deskripsi',"orderable": false },
-                { data: 'provinsi', name: 'provinsi',"orderable": false, render: function (data, type, row, meta) {
+                { data: 'provinsi', name: 'provinsi',"orderable": false, 'searchable':false, render: function (data, type, row, meta) {
                     return row.provinsi.nama_provinsi;
                 }},
                 @if($cek_menu_akses['status_edit'] == '1' || $cek_menu_akses['status_hapus'] == '1')

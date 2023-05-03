@@ -15,7 +15,7 @@ class CreateJenisKsTables extends Migration
     {
         Schema::create('m_jenis_ks', function (Blueprint $table) {
             $table->id();
-            $table->string("nama_jenis_kerjasama",25);
+            $table->string("nama_jenis_kerjasama",50);
             $table->string("deskripsi",50)->default("-");
             $table->timestamps();
         });
