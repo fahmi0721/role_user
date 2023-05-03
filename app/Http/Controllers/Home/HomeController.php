@@ -38,12 +38,12 @@ class HomeController extends Controller
         $res = array();
         $aktif = DB::select("SELECT COUNT(id) AS tot  FROM t_dok_ks WHERE DATE_FORMAT(NOW(), '%Y-%m-%d') BETWEEN tgl_awal AND tgl_akhir GROUP BY DATE_FORMAT(NOW(), '%Y-%m-%d')");
         $tidak_aktif = DB::select("SELECT COUNT(id) AS tot,tgl_akhir  FROM t_dok_ks WHERE DATE_FORMAT(NOW(), '%Y-%m-%d') > tgl_akhir GROUP BY id");
-        $res[0]['value'] = $aktif[0]->tot;
+        $res[0]['value'] = count($aktif) > 0 ? $aktif[0]->tot : 0;
         $res[0]['label'] = "Aktif";
         $res[0]['color'] = "#3c8dbc";
         $res[0]['highlight'] = "#3c8dbc";
 
-        $res[1]['value'] = $tidak_aktif[0]->tot;
+        $res[1]['value'] = count($tidak_aktif) > 0 ? $tidak_aktif[0]->tot : 0;
         $res[1]['label'] = "Tidak Aktif";
         $res[1]['color'] = "#f56954";
         $res[1]['highlight'] = "#f56954";
