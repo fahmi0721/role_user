@@ -17,7 +17,7 @@ class HomeController extends Controller
             return redirect('no-role');
         }
         $jenis_ks = M_JenisKerjasama::select("id","nama_jenis_kerjasama","deskripsi")->get();
-        $std = DB::select("SELECT b.id_jenis_kerjasama, a.nama_jenis_kerjasama AS nama, COUNT(b.id_jenis_kerjasama) AS tot, a.id, a.deskripsi
+        $std = DB::select("SELECT a.nama_jenis_kerjasama AS nama, COUNT(b.id_jenis_kerjasama) AS tot, a.id, a.deskripsi
         FROM m_jenis_ks a
         INNER JOIN t_dok_ks b ON a.id = b.id_jenis_kerjasama GROUP BY b.id_jenis_kerjasama");
         return view('pages.home.detail',compact("jenis_ks","std"));
